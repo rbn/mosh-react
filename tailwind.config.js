@@ -14,6 +14,7 @@ export default {
     colors: {
       'primary': '#32ff33',
       'red': '#ff8000',
+      'black': '#000000',
       'white': '#ffffff',
       'blue': '#1fb6ff',
       'purple': '#7e5bef',

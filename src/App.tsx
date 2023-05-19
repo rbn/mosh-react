@@ -9,7 +9,9 @@ function App() {
           Hello from a <span>p</span> tag
         </p>
       </Alert>
-      <Button color="purple">My Button</Button>
+      <Button color="black">
+        <span>My</span> Button
+      </Button>
     </div>
   );
 }
