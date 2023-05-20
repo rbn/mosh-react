@@ -8,12 +8,17 @@ const StateLearner = () => {
   });
 
   const handleClick = () => {
-    drink.price;
+    setDrink({
+      ...drink,
+      price: drink.price + 1,
+    });
+    console.log("hello" + drink.price);
   };
 
   return (
     <div>
-      <Button color="red">kasdljasd</Button>
+      {drink.price}
+      <Button onClick={handleClick}>click me</Button>
     </div>
   );
 };
