@@ -1,8 +1,15 @@
-import Alert from "./components/Alert";
+import { useState } from "react";
+import AlertDismissable from "./components/AlertDismissable";
 import Button from "./components/Button";
 import StateLearner from "./components/StateLearner";
+import Iconerator from "./components/Iconerator";
 
 function App() {
+  const [alertVis, setAlertVis] = useState(false);
+  const closeAlert = (event) => {
+    console.log(event);
+  };
+
   return (
     <div className="container">
       <div className="header">
