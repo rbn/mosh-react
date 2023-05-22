@@ -3,6 +3,7 @@ import AlertDismissable from "./components/AlertDismissable";
 import Button from "./components/Button";
 import StateLearner from "./components/StateLearner";
 import Iconerator from "./components/Iconerator";
+import ExpenseTracker from "./components/ExpenseTracker";
 
 function App() {
   const [alertVis, setAlertVis] = useState(false);
@@ -16,6 +17,12 @@ function App() {
         <Button>
           <span>My</span> Button
         </Button>
+      </div>
+      <div
+        id="midPanel2"
+        className="divide-y divide-dashed p-20  border-sky-600 border-double border-4"
+      >
+        <ExpenseTracker></ExpenseTracker>
       </div>
       <div
         id="upperPanel"
