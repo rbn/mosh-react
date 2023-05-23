@@ -17,22 +17,7 @@ export default {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
-      colors: {
-        'primary': '#32ff33',
-        'red': '#ff8000',
-        'black': '#000000',
-        'white': '#ffffff',
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
-      },
-      spacing: {
+           spacing: {
         '128': '32rem',
         '144': '36rem',
       },
