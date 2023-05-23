@@ -4,6 +4,8 @@ import Button from "./components/Button";
 import StateLearner from "./components/StateLearner";
 import Iconerator from "./components/Iconerator";
 import ExpenseTracker from "./components/ExpenseTracker";
+import ExpenseTracker2 from "./components/ExpenseTracker2";
+import SideBar from "./components/SideBar";
 
 function App() {
   const [alertVis, setAlertVis] = useState(false);
@@ -12,12 +14,11 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div id="header" className="p-5 border-indigo-600 border-double border-4">
-        <Button>
-          <span>My</span> Button
-        </Button>
-      </div>
+    <div className="flex">
+      <SideBar></SideBar>
+
+      <ExpenseTracker2></ExpenseTracker2>
+
       <div
         id="midPanel2"
         className="divide-y divide-dashed p-20  border-sky-600 border-double border-4"

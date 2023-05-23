@@ -1,10 +1,10 @@
 import React from "react";
-import { HiAcademicCap } from "react-icons/hi";
+import { FaBeer } from "react-icons/fa";
 
 const Iconerator = () => {
   return (
     <div>
-      <HiAcademicCap color="indigo-800" size="100" />
+      Hello world <FaBeer />
     </div>
   );
 };

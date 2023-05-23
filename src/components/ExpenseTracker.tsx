@@ -18,7 +18,9 @@ const ExpenseTracker = () => {
     <>
       <div className="block max-w-2xl rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
         <form className="max-w-md">
-          <h3 className="mb-6 text-2xl font-bold w-full">Expense Tracker</h3>
+          <h3 className="mb-6 text-2xl font-bold w-full">
+            Expense Tracker - useRef
+          </h3>
           <div className="bg-transparent">
             <p>
               <label htmlFor="description">Description</label>
