@@ -7,7 +7,7 @@ import { ImLab } from "react-icons/im";
 
 const SideBar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-16 m-0 pt-20 flex flex-col bg-gray-800 text-white">
+    <div className="fixed top-0 left-0 h-screen w-16 m-0 pt-20 flex flex-col bg-gray-800 text-whit z-50">
       <SideBarIcon icon={<ImHome size="28" />}></SideBarIcon>
       <SideBarIcon icon={<ImPencil size="28" />}></SideBarIcon>
       <SideBarIcon icon={<ImLeaf size="28" />}></SideBarIcon>

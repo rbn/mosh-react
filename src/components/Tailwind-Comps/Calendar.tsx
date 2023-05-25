@@ -133,7 +133,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Example() {
+export default function Calendar() {
   return (
     <div className="lg:flex lg:h-full lg:flex-col">
       <header className="flex items-center justify-between border-b border-gray-200 px-6 py-4 lg:flex-none">

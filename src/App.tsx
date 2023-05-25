@@ -9,15 +9,10 @@ import SideBar from "./components/SideBar";
 import TopBar from "./components/TopBar";
 import TWsample from "./components/TWsample";
 import ContactCardList from "./components/ContactCardList";
-import Example from "./components/Calendar";
+import Example from "./components/Tailwind-Comps/Calendar";
 import Footer from "./Pages/Footer";
 
 function App() {
-  const [alertVis, setAlertVis] = useState(false);
-  const closeAlert = (event) => {
-    console.log(event);
-  };
-
   return (
     <div className="flex">
       <div className="flex-col pl-16">

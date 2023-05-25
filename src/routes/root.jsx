@@ -1,43 +1,36 @@
+import { Outlet, Link } from "react-router-dom";
+import SideBar from "../components/SideBar";
+import TopBar from "../components/TopBar";
+import Calendar from "../components/Tailwind-Comps/Calendar";
+import StateLearner from "../components/StateLearner";
+import Stats from "../components/Tailwind-Comps/Stats";
+import SignIn from "../components/Tailwind-Comps/SignIn";
+import Modal from "../components/Tailwind-Comps/Modal";
+import ProductList from "../components/Tailwind-Comps/ProductList";
+import ShoppingCartPage from "../components/Tailwind-Comps/ShoppingCartPage";
+
 export default function Root() {
   return (
-    <>
-      <div id="sidebar">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden={true}
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            ></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
+    <div className="flex">
+      <div className="flex-col pl-16">
+        {/* <SideBar></SideBar> */}
+        <TopBar></TopBar>
+        <div className="py-10">
+
+          <main>
+            <div className="flex-column mx-auto max-w-7xl sm:px-6 lg:px-8">
+                {/* <Calendar></Calendar>
+                <Stats></Stats>
+                <SignIn></SignIn>
+                <Modal></Modal>
+                <ProductList></ProductList> */}
+                <ShoppingCartPage></ShoppingCartPage>
+            </div>
+          </main>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/contacts/1`}>Your Name</a>
-            </li>
-            <li>
-              <a href={`/contacts/2`}>Your Friend</a>
-            </li>
-          </ul>
-        </nav>
+
+
       </div>
-      <div id="detail"></div>
-    </>
+    </div>
   );
 }
