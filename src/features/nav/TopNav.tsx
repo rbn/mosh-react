@@ -15,14 +15,11 @@ import {
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events" },
-  // { name: "Committees", href: "#" },
-  // { name: "Subscriptions", href: "#" },
-  { name: "Store", href: "/" },
-  // { name: "My Orders", href: "#" },
-  { name: "Membership", href: "/" },
+  { name: "Store", href: "/store" },
+  { name: "Membership", href: "/membership" },
 ];
 
-const Header = () => {
+const TopNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
@@ -112,4 +109,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default TopNav;
