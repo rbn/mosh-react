@@ -1,20 +1,49 @@
 import React from "react";
 import { Platform } from "../../../hooks/useGames";
+import {
+  FaWindows,
+  FaPlaystation,
+  FaXbox,
+  FaApple,
+  FaLinux,
+  FaAndroid,
+} from "react-icons/fa";
+import { MdPhoneIphone } from "react-icons/md";
+import { SiNintendo } from "react-icons/si";
+import { BsGlobe } from "react-icons/bs";
 
 interface Props {
   platforms: Platform[];
 }
 
-const PlatformIconList = () => {
-  return;
-  <>
-    {game.parent_platforms.map(({ platform }) => (
-      <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-        {platform.name}
-      </span>
-    ))}
-    ;
-  </>;
+const Icon = (props) => {
+  const { icon } = props;
+  const TheIcon = icon;
+  return <TheIcon {...props} />;
+};
+
+const PlatformIconList = ({ platforms }: Props) => {
+  const iconMap = {
+    pc: FaWindows,
+    playstation: FaPlaystation,
+    linux: FaLinux,
+    mac: FaApple,
+    xbox: FaXbox,
+    android: FaAndroid,
+    ios: MdPhoneIphone,
+    nintendo: SiNintendo,
+    web: BsGlobe,
+  };
+
+  return (
+    <>
+      <div className="px-6 pt-4 pb-2">
+        {platforms.map((platform) => (
+          <Icon icon={iconMap[platform.slug]} />
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default PlatformIconList;
