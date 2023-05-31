@@ -16,6 +16,7 @@ import Membership from "./pages/Membership";
 import TailwindSample from "./pages/TailwindSample";
 import ApplicationShell from "./pages/ApplicationShell";
 import ApplicationShell2 from "./pages/ApplicationShell2";
+import Events from "./pages/Events";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/tw" element={<TailwindSample />}></Route>
         <Route path="/as" element={<ApplicationShell />}></Route>
         <Route path="/as2" element={<ApplicationShell2 />}></Route>
-        <Route path="/events" element={<EventWizardHome />}>
+        <Route path="/events" element={<Events />}>
           <Route index element={<EventCalendar />}></Route>
           <Route path="1" element={<EventWizard1 />}></Route>
           <Route path="2" element={<EventWizard2 />}></Route>

@@ -8,6 +8,7 @@ import {
   FaLinux,
   FaAndroid,
 } from "react-icons/fa";
+import { IconType } from "react-icons";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { BsGlobe } from "react-icons/bs";
@@ -37,11 +38,11 @@ const PlatformIconList = ({ platforms }: Props) => {
 
   return (
     <>
-      <div className="px-6 pt-4 pb-2">
-        {platforms.map((platform) => (
-          <Icon icon={iconMap[platform.slug]} />
-        ))}
-      </div>
+      {platforms.map((platform) => (
+        <span className="inline-block rounded-full px-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          <Icon icon={iconMap[platform.slug]} color="#9ca3af" />
+        </span>
+      ))}
     </>
   );
 };
