@@ -84,11 +84,7 @@ const TopNav = () => {
             <div className="-ml-0.5">
               <a href="#" className="-m-1.5 block p-1.5">
                 <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
+                <img className="h-8 w-auto" src="img/Cobalt-Icon.jpg" alt="" />
               </a>
             </div>
           </div>

@@ -13,13 +13,18 @@ import EventWizard3 from "./features/Events/EventWizard3";
 import EventWizard4 from "./features/Events/EventWizard4";
 import Store from "./pages/Store";
 import Membership from "./pages/Membership";
+import TailwindSample from "./pages/TailwindSample";
+import ApplicationShell from "./pages/ApplicationShell";
+import ApplicationShell2 from "./pages/ApplicationShell2";
 
 function App() {
   return (
     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 flex">
-      <TopNav />
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/tw" element={<TailwindSample />}></Route>
+        <Route path="/as" element={<ApplicationShell />}></Route>
+        <Route path="/as2" element={<ApplicationShell2 />}></Route>
         <Route path="/events" element={<EventWizardHome />}>
           <Route index element={<EventCalendar />}></Route>
           <Route path="1" element={<EventWizard1 />}></Route>
