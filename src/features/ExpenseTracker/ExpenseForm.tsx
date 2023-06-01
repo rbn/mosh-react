@@ -1,6 +1,6 @@
 import React from "react";
 import categories from "./categories";
-import Button from "../../../components/ui/Button";
+import Button from "../../components/ui/Button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

@@ -1,17 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { Switch } from "@headlessui/react";
-import { Route, Routes } from "react-router";
 
-import ErrorPage from "./ErrorPage";
-import EventWizardHome from "../features/Events/EventWizardHome";
-import EventWizard1 from "../features/Events/EventWizard1";
-import EventWizard2 from "../features/Events/EventWizard2";
-import EventWizard3 from "../features/Events/EventWizard3";
-import EventWizard4 from "../features/Events/EventWizard4";
-import EventCalendar from "../features/Events/EventCalendar";
-import Header from "./nav/Header";
-import EventsSideBar from "./nav/SideBarEvents";
+import EventCalendar from "../../features/Events/EventCalendar";
+import Header from "../nav/Header";
+import EventsSideBar from "../nav/SideBarEvents";
 
 const Events = () => {
   const [automaticTimezoneEnabled, setAutomaticTimezoneEnabled] =

@@ -1,18 +1,18 @@
 import React from "react";
-import Home from "./ui/Home";
+import Home from "./ui/pages/Home";
 import { Route, Routes } from "react-router";
-import ErrorPage from "./ui/ErrorPage";
+import ErrorPage from "./ui/pages/ErrorPage";
 import EventCalendar from "./features/Events/EventCalendar";
 import EventWizard1 from "./features/Events/EventWizard1";
 import EventWizard2 from "./features/Events/EventWizard2";
 import EventWizard3 from "./features/Events/EventWizard3";
 import EventWizard4 from "./features/Events/EventWizard4";
-import Store from "./ui/Store";
-import Membership from "./ui/Membership";
-import TailwindSample from "./ui/TailwindSample";
-import ApplicationShell from "./ui/ApplicationShell";
-import ApplicationShell2 from "./ui/ApplicationShell2";
-import Events from "./ui/Events";
+import Store from "./ui/pages/Store";
+import Membership from "./ui/pages/Membership";
+import TailwindSample from "./ui/pages/TailwindSample";
+import ApplicationShell from "./ui/pages/ApplicationShell";
+import ApplicationShell2 from "./ui/pages/ApplicationShell2";
+import Events from "./ui/pages/Events";
 
 function App() {
   return (

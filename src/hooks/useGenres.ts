@@ -7,5 +7,4 @@ export interface Genre {
 
 const useGenres = () => useData<Genre>('/genres');
   
-
-export default useGenres
+export default useGenres;

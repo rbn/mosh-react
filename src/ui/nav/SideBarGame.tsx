@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BellIcon,
   CreditCardIcon,
@@ -8,8 +8,8 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import GenreList from "../../features/MoshPractice/Games/GenreList";
-import Spinner from "../spinners/Spinner";
+import GenreList from "../../features/Games/GenreList";
+import { Genre } from "../../hooks/useGenres";
 
 const secondaryNavigation = [
   {
@@ -33,15 +33,20 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const SideBarGames = () => {
+interface Props {
+  onSelectGenre: (genre) => void;
+}
+
+const SideBarGame = ({ onSelectGenre }: Props) => {
   return (
     <aside className="sidebar-aside">
-      <div className="m-6">
-        <Spinner />
-      </div>
-      <GenreList />
+      <GenreList
+        onSelectGenre={(genre) => {
+          onSelectGenre(genre);
+        }}
+      />
     </aside>
   );
 };
 
-export default SideBarGames;
+export default SideBarGame;

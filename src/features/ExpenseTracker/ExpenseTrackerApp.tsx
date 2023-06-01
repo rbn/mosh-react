@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ExpenseList from "./ExpenseList";
 import ExpenseFilter from "./ExpenseFilter";
 import ExpenseForm from "./ExpenseForm";
+/* For testing purposed only - this can be deleted */
+
 import categories from "./categories";
 
 const ExpenseTrackerApp = () => {

@@ -5,7 +5,7 @@ import { MdTerrain } from "react-icons/md";
 import { ImLeaf } from "react-icons/im";
 import { ImLab } from "react-icons/im";
 
-const SideBar = () => {
+const SideBarFireship = () => {
   return (
     <div className="fixed top-0 left-0 h-screen w-16 m-0 pt-20 flex flex-col bg-gray-800 text-whit z-50">
       <SideBarIcon icon={<ImHome size="28" />}></SideBarIcon>
@@ -26,4 +26,4 @@ const SideBarIcon = ({ icon, text = "tooltip 💡" }) => {
   );
 };
 
-export default SideBar;
+export default SideBarFireship;
