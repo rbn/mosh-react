@@ -10,8 +10,8 @@ import EventWizard2 from "../features/Events/EventWizard2";
 import EventWizard3 from "../features/Events/EventWizard3";
 import EventWizard4 from "../features/Events/EventWizard4";
 import EventCalendar from "../features/Events/EventCalendar";
-import Header from "../ui/nav/Header";
-import EventsSideBar from "../ui/nav/SideBarEvents";
+import Header from "./nav/Header";
+import EventsSideBar from "./nav/SideBarEvents";
 
 const Events = () => {
   const [automaticTimezoneEnabled, setAutomaticTimezoneEnabled] =

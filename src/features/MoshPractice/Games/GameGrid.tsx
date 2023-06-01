@@ -1,10 +1,10 @@
 import React from "react";
-import useGames from "../../../hooks/useGames";
+import useGames, { Game } from "../../../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 
 const GameGrid = () => {
-  const { games, error, isLoading } = useGames();
+  const { data, error, isLoading } = useGames<Game>();
   const skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -12,7 +12,7 @@ const GameGrid = () => {
       {error.length > 0 ? <p>{error}</p> : ""}
       {isLoading &&
         skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
-      {games.map((game) => (
+      {data.map((game) => (
         <GameCard key={game.id} game={game} />
       ))}
     </>

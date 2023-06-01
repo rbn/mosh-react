@@ -10,8 +10,8 @@ import {
 } from "@heroicons/react/24/outline";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import React from "react";
-import Header from "../ui/nav/Header";
-import Footer from "../ui/nav/Footer";
+import Header from "./nav/Header";
+import Footer from "./nav/Footer";
 import {
   SiDynamics365,
   SiMicrosoftoffice,

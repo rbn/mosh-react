@@ -1,22 +1,18 @@
 import React from "react";
-import MoshPage from "./features/MoshPractice/pages/MoshPage";
-import Home from "./pages/Home";
+import Home from "./ui/Home";
 import { Route, Routes } from "react-router";
-import ErrorPage from "./pages/ErrorPage";
-import SideBar from "./features/nav/SideBar";
-import TopNav from "./features/nav/TopNav";
-import EventWizardHome from "./features/Events/EventWizardHome";
+import ErrorPage from "./ui/ErrorPage";
 import EventCalendar from "./features/Events/EventCalendar";
 import EventWizard1 from "./features/Events/EventWizard1";
 import EventWizard2 from "./features/Events/EventWizard2";
 import EventWizard3 from "./features/Events/EventWizard3";
 import EventWizard4 from "./features/Events/EventWizard4";
-import Store from "./pages/Store";
-import Membership from "./pages/Membership";
-import TailwindSample from "./pages/TailwindSample";
-import ApplicationShell from "./pages/ApplicationShell";
-import ApplicationShell2 from "./pages/ApplicationShell2";
-import Events from "./pages/Events";
+import Store from "./ui/Store";
+import Membership from "./ui/Membership";
+import TailwindSample from "./ui/TailwindSample";
+import ApplicationShell from "./ui/ApplicationShell";
+import ApplicationShell2 from "./ui/ApplicationShell2";
+import Events from "./ui/Events";
 
 function App() {
   return (

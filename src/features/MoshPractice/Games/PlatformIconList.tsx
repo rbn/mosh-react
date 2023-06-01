@@ -17,10 +17,9 @@ interface Props {
   platforms: Platform[];
 }
 
-const Icon = (props) => {
-  const { icon } = props;
+const Icon = ({ icon, color }) => {
   const TheIcon = icon;
-  return <TheIcon {...props} />;
+  return <TheIcon color={color} />;
 };
 
 const PlatformIconList = ({ platforms }: Props) => {
@@ -39,7 +38,10 @@ const PlatformIconList = ({ platforms }: Props) => {
   return (
     <>
       {platforms.map((platform) => (
-        <span className="inline-block rounded-full px-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <span
+          className="inline-block rounded-full px-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          key={platform.id}
+        >
           <Icon icon={iconMap[platform.slug]} color="#9ca3af" />
         </span>
       ))}

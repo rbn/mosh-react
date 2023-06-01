@@ -1,7 +1,7 @@
 import React from "react";
 import GameGrid from "../features/MoshPractice/Games/GameGrid";
-import TopNav from "../ui/nav/TopNav";
-import SideBarGame from "../ui/nav/SideBarGames";
+import TopNav from "./nav/TopNav";
+import SideBarGame from "./nav/SideBarGames";
 
 const Home = () => {
   return (

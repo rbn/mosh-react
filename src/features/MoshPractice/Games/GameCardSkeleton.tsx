@@ -10,13 +10,13 @@ interface Props {
 
 const GameCardSkeleton = () => {
   return (
-    <div className="max-w-sm rounded-4xl overflow-hidden shadow-lg my-10">
+    <div className="max-w-sm rounded-4xl overflow-hidden shadow-lg my-10 animate-pulse">
       <div className="object-cover h-48 w-96 bg-gray-300"></div>
       <div className="px-6 py-4">
-        <div className="font-bold  h-24 w-48 text-xl mb-2 inline-block text-center">
-          <span className="text-slate-400 italic text-sm">loading ...</span>
+        <div className="grid grid-cols-3 gap-4 h-24">
+          <div className="h-2 bg-slate-200 rounded col-span-2"></div>
+          <div className="h-2 bg-slate-200 rounded colclassName-span-1"></div>
         </div>
-        <div className="px-6 py-4 justify-between -m-2 flex flex-wrap "></div>
       </div>
     </div>
   );
