@@ -13,12 +13,13 @@ import TailwindSample from "./ui/pages/TailwindSample";
 import ApplicationShell from "./ui/pages/ApplicationShell";
 import ApplicationShell2 from "./ui/pages/ApplicationShell2";
 import Events from "./ui/pages/Events";
+import GamePage from "./ui/pages/GamePage";
 
 function App() {
   return (
     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 flex">
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<GamePage />}></Route>
         <Route path="/tw" element={<TailwindSample />}></Route>
         <Route path="/as" element={<ApplicationShell />}></Route>
         <Route path="/as2" element={<ApplicationShell2 />}></Route>

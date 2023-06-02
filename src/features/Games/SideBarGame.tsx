@@ -8,7 +8,7 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import GenreList from "../../features/Games/GenreList";
+import GenreList from "./GenreList";
 import { Genre } from "../../hooks/useGenres";
 
 const secondaryNavigation = [
