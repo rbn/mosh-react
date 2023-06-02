@@ -35,12 +35,14 @@ function classNames(...classes) {
 
 interface Props {
   onSelectGenre: (genre) => void;
+  selectedGenre?: Genre | null;
 }
 
-const SideBarGame = ({ onSelectGenre }: Props) => {
+const SideBarGame = ({ selectedGenre, onSelectGenre }: Props) => {
   return (
     <aside className="sidebar-aside">
       <GenreList
+        selectedGenre={selectedGenre}
         onSelectGenre={(genre) => {
           onSelectGenre(genre);
         }}

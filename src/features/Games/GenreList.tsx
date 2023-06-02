@@ -1,11 +1,12 @@
 import React from "react";
 import useGenres, { Genre } from "../../hooks/useGenres";
-import Button, { Style } from "../../ui/elements/Button";
+import Button from "../../ui/elements/Button";
 
 interface Props {
   onSelectGenre: (genre: Genre) => void;
+  selectedGenre: Genre | null;
 }
-const GenreList = ({ onSelectGenre }: Props) => {
+const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data } = useGenres();
   return (
     <div>
@@ -14,7 +15,12 @@ const GenreList = ({ onSelectGenre }: Props) => {
           <Button
             key={genre.id}
             onClick={() => onSelectGenre(genre)}
-            style={Style.underlined}
+            style="underlined"
+            fontWeight={
+              genre.id === selectedGenre?.id
+                ? "font-bold italic underline"
+                : "font-normal"
+            }
           >
             {genre.name}
           </Button>

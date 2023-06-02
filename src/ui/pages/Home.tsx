@@ -11,6 +11,7 @@ const Home = () => {
     <>
       <TopNav />
       <SideBarGame
+        selectedGenre={selectedGenre}
         onSelectGenre={(genre: Genre) => {
           setSelectedGenre(genre);
         }}
