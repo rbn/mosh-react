@@ -1,21 +1,26 @@
 import React from "react";
-import Dropdown from "../../ui/elements/Dropdown";
-import { Platform } from "../../hooks/useGames";
+import Dropdown, { menuItem } from "../../ui/elements/Dropdown";
+import usePlatforms, { Platform } from "../../hooks/usePlatforms";
 
 interface Props {
-  platform: Platform;
+  onSelectPlatform: (platform: Platform) => void;
 }
 
-const PlatformSelector = () => {
-  const menuItems = [
-    { name: "hi", link: "/jack" },
-    { name: "larry", link: "/jack" },
-    { name: "hey", link: "/jack" },
-  ];
+const PlatformSelector = ({ onSelectPlatform }: Props) => {
+  const { data, error, isLoading } = usePlatforms();
+  let menuItems: menuItem[] = [];
+
+  data.map((platform) => {
+    menuItems.push({
+      name: platform.name,
+      link: "#",
+      onClick: () => onSelectPlatform(platform),
+    });
+  });
 
   return (
     <div>
-      <Dropdown firstItem="Platforms" menuItems={menuItems} />
+      <Dropdown title="Platforms" menuItems={menuItems} />
     </div>
   );
 };
