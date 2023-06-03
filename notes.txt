@@ -1,0 +1,1 @@
+| v || and & v && - https://stackoverflow.com/questions/49589867/difference-between-single-and-double-vertical-bar-in-javascript

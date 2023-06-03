@@ -4,9 +4,10 @@ import usePlatforms, { Platform } from "../../hooks/usePlatforms";
 
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
+  selectedPlatform: Platform | null;
 }
 
-const PlatformSelector = ({ onSelectPlatform }: Props) => {
+const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
   const { data, error, isLoading } = usePlatforms();
   let menuItems: menuItem[] = [];
 
@@ -20,7 +21,10 @@ const PlatformSelector = ({ onSelectPlatform }: Props) => {
 
   return (
     <div>
-      <Dropdown title="Platforms" menuItems={menuItems} />
+      <Dropdown
+        title={selectedPlatform?.name || "Platforms"}
+        menuItems={menuItems}
+      />
     </div>
   );
 };
