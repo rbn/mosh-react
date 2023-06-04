@@ -10,3 +10,5 @@
 
   command + 0 (focuses on explorer).
   command + left-arrow
+
+* deploy to vercel (come back and do - he only did a dev (or UAT?) auto-deploy. Try a prod?)
