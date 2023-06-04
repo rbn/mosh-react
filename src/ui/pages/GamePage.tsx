@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import GameGrid from "../../features/Games/GameGrid";
 import TopNav from "../nav/TopNav";
-import SideBarGame from "../../features/Games/SideBarGame";
+import GameSideBar from "../../features/Games/GameSideBar";
 import { Genre } from "../../hooks/useGenres";
 import PlatformSelector from "../../features/Games/PlatformSelector";
 import { Platform } from "../../hooks/usePlatforms";
-import { Game } from "../../hooks/useGames";
 import SearchInput from "../elements/SearchInput";
 import GameHeader from "../../features/Games/GameHeader";
 
@@ -21,12 +20,15 @@ const GamePage = () => {
   return (
     <>
       <TopNav />
-      <SideBarGame
-        selectedGenre={gameQuery.genre}
-        onSelectGenre={(genre: Genre) => {
-          setGameQuery({ ...gameQuery, genre });
-        }}
-      />
+
+      <aside className="sidebar-aside visible lg:visible md:visible sm:invisible">
+        <GameSideBar
+          selectedGenre={gameQuery.genre}
+          onSelectGenre={(genre: Genre) => {
+            setGameQuery({ ...gameQuery, genre });
+          }}
+        />
+      </aside>
       <main className="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20 h-screen w-screen">
         <div className="py-6">
           <SearchInput
@@ -45,7 +47,7 @@ const GamePage = () => {
             setGameQuery({ ...gameQuery, platform });
           }}
         />
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
           <GameGrid gameQuery={gameQuery} />
         </div>
       </main>

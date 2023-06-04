@@ -38,17 +38,15 @@ interface Props {
   selectedGenre?: Genre | null;
 }
 
-const SideBarGame = ({ selectedGenre, onSelectGenre }: Props) => {
+const GameSideBar = ({ selectedGenre, onSelectGenre }: Props) => {
   return (
-    <aside className="sidebar-aside">
-      <GenreList
-        selectedGenre={selectedGenre}
-        onSelectGenre={(genre) => {
-          onSelectGenre(genre);
-        }}
-      />
-    </aside>
+    <GenreList
+      selectedGenre={selectedGenre || null}
+      onSelectGenre={(genre) => {
+        onSelectGenre(genre);
+      }}
+    />
   );
 };
 
-export default SideBarGame;
+export default GameSideBar;

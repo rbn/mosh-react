@@ -14,7 +14,6 @@ const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
-  console.log(error);
   if (error.length) return <p>{error}</p>;
 
   return (
