@@ -7,6 +7,7 @@ import PlatformSelector from "../../features/Games/PlatformSelector";
 import { Platform } from "../../hooks/usePlatforms";
 import { Game } from "../../hooks/useGames";
 import SearchInput from "../elements/SearchInput";
+import GameHeader from "../../features/Games/GameHeader";
 
 export interface GameQuery {
   genre: Genre | null;
@@ -34,6 +35,9 @@ const GamePage = () => {
               setGameQuery({ ...gameQuery, searchText });
             }}
           />
+        </div>
+        <div className="py-6">
+          <GameHeader gameQuery={gameQuery} />
         </div>
         <PlatformSelector
           selectedPlatform={gameQuery.platform}

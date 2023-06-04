@@ -10,6 +10,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
   const { data } = useGenres();
   return (
     <div>
+      <h1>Genres</h1>
       {data.map((genre) => (
         <p className="" key={genre.id}>
           <Button
