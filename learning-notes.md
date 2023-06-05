@@ -12,3 +12,9 @@
   command + left-arrow
 
 * deploy to vercel (come back and do - he only did a dev (or UAT?) auto-deploy. Try a prod?)
+
+routing
+
+- navigate - hooks - navigate programmatically (button push) - get ready to use this
+
+- params hook - get params from url etc

@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./ui/pages/Home";
+import HomePage from "./ui/pages/HomePage";
 import { Route, Routes } from "react-router";
 import ErrorPage from "./ui/pages/ErrorPage";
 import EventCalendar from "./features/Events/EventCalendar";
@@ -12,7 +12,7 @@ import Membership from "./ui/pages/Membership";
 import TailwindSample from "./ui/pages/TailwindSample";
 import ApplicationShell from "./ui/pages/ApplicationShell";
 import ApplicationShell2 from "./ui/pages/ApplicationShell2";
-import Events from "./ui/pages/Events";
+import EventsPage from "./ui/pages/EventsPage";
 import GamePage from "./ui/pages/GamePage";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
         <Route path="/tw" element={<TailwindSample />}></Route>
         <Route path="/as" element={<ApplicationShell />}></Route>
         <Route path="/as2" element={<ApplicationShell2 />}></Route>
-        <Route path="/events" element={<Events />}>
+        <Route path="/events" element={<EventsPage />}>
           <Route index element={<EventCalendar />}></Route>
           <Route path="1" element={<EventWizard1 />}></Route>
           <Route path="2" element={<EventWizard2 />}></Route>

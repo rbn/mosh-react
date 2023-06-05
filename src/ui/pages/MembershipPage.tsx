@@ -1,6 +1,6 @@
 import React from "react";
 
-const Membership = () => {
+const MembershipPage = () => {
   return (
     <main className="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20 h-screen">
       I am Membership
@@ -8,4 +8,4 @@ const Membership = () => {
   );
 };
 
-export default Membership;
+export default MembershipPage;

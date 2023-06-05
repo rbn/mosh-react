@@ -11,12 +11,14 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events" },
   { name: "Store", href: "/store" },
   { name: "Membership", href: "/membership" },
+  { name: "(Games)", href: "/games" },
 ];
 
 const TopNav = () => {
@@ -41,9 +43,9 @@ const TopNav = () => {
         </div>
         <nav className="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
           {navigation.map((item, itemIdx) => (
-            <a key={itemIdx} href={item.href}>
+            <Link key={itemIdx} to={item.href}>
               {item.name}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end gap-x-8">

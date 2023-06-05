@@ -31,7 +31,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const SideBar = () => {
+const EventSideBar = () => {
   return (
     <aside className="sidebar-aside">
       <nav className="flex-none px-4 sm:px-6 lg:px-0">
@@ -69,4 +69,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default EventSideBar;
