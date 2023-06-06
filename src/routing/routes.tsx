@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../ui/pages/HomePage";
+import LoginPage from "../ui/pages/LoginPage";
 import React from "react";
 import GamePage from "../ui/pages/GamePage";
 import EventsPage from "../ui/pages/EventsPage";
@@ -8,10 +8,23 @@ import StorePage from "../ui/pages/StorePage";
 import MembershipPage from "../ui/pages/MembershipPage";
 import EventTestingLinks from "../features/Events/EventTestingLinks";
 import EventList from "../features/Events/EventList";
+import ApplicationShell from "../ui/layouts/ApplicationShell";
+import BlankLayout from "../ui/layouts/BlankLayout";
+import HomePage from "../ui/pages/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <BlankLayout />,
+    children: [
+      {
+        path: "",
+        element: <LoginPage />,
+      },
+    ],
+  },
+  {
+    path: "/auth/*",
     element: <BasicLayout />,
     children: [
       {
@@ -19,7 +32,7 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/events",
+        path: "events",
         element: <EventsPage />,
         children: [
           {
@@ -33,18 +46,22 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "/store",
+        path: "store",
         element: <StorePage />,
       },
       {
-        path: "/membership",
+        path: "membership",
         element: <MembershipPage />,
       },
       {
-        path: "/games",
+        path: "games",
         element: <GamePage />,
       },
     ],
+  },
+  {
+    path: "/shell1",
+    element: <ApplicationShell />,
   },
 ]);
 

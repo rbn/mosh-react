@@ -13,7 +13,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
 
   return (
     <div>
-      <h1>Genres</h1>
+      <h2>Genres</h2>
       {data.map((genre) => (
         <p className="" key={genre.id}>
           <Button

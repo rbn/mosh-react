@@ -1,0 +1,3 @@
+- routing is hacked - need to figure out login
+- routing - repeating "main" and "aside" too much
+  - either add global styles or figure out useOutletContext

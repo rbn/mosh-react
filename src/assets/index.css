@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  aside { 
+    @apply flex px-6 overflow-x-auto border-b border-gray-900/5 py-4 lg:block lg:w-64 lg:flex-none lg:border-0 lg:py-10 sm:mt-20
+  }
   .sidebar-icon {
     @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-2 shadow-lg bg-gray-800 text-emerald-500 hover:bg-emerald-800 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
   }
@@ -11,9 +14,13 @@
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
 
-  .sidebar-aside { 
-    @apply flex overflow-x-auto border-b border-gray-900/5 py-4 lg:block lg:w-64 lg:flex-none lg:border-0 lg:py-20 sm:mt-20
-  }
+  
+  a {
+    @apply font-medium text-blue-600 dark:text-blue-950 hover:underline
+ }
+ main {
+  @apply px-4 py-16 sm:px-6 lg:flex-auto lg:px-4 lg:py-20 h-screen w-screen
+ }
 }
 
 @layer base {
@@ -28,10 +35,10 @@
     src: url(/fonts/proxima-nova/500-medium.woff) format("woff");
   } */
   h1 {
-    @apply text-2xl;
+    @apply text-4xl;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
   }
   
 }

@@ -11,17 +11,18 @@ import {
   UsersIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Events", href: "/events" },
-  { name: "Store", href: "/store" },
-  { name: "Membership", href: "/membership" },
-  { name: "(Games)", href: "/games" },
+  { name: "Home", href: "/auth" },
+  { name: "Events", href: "/auth/events" },
+  { name: "Store", href: "/auth/store" },
+  { name: "Membership", href: "/auth/membership" },
+  { name: "(Games)", href: "/auth/games" },
 ];
 
 const TopNav = () => {
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
@@ -39,6 +40,7 @@ const TopNav = () => {
             className="h-14 w-auto"
             src="/img/Cobalt-Icon.jpg"
             alt="Cobalt"
+            onClick={(e) => navigate("/")}
           />
         </div>
         <nav className="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">

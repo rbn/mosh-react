@@ -19,38 +19,36 @@ const GamePage = () => {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 flex">
-        <aside className="sidebar-aside visible lg:visible md:visible sm:invisible">
-          <GameSideBar
-            selectedGenre={gameQuery.genre}
-            onSelectGenre={(genre: Genre) => {
-              setGameQuery({ ...gameQuery, genre });
+      <aside>
+        <GameSideBar
+          selectedGenre={gameQuery.genre}
+          onSelectGenre={(genre: Genre) => {
+            setGameQuery({ ...gameQuery, genre });
+          }}
+        />
+      </aside>
+      <main>
+        <div className="py-6">
+          <SearchInput
+            placeholder="Search games"
+            onSearch={(searchText) => {
+              setGameQuery({ ...gameQuery, searchText });
             }}
           />
-        </aside>
-        <main className="px-4 py-16 sm:px-6 lg:flex-auto lg:px-0 lg:py-20 h-screen w-screen">
-          <div className="py-6">
-            <SearchInput
-              placeholder="Search games"
-              onSearch={(searchText) => {
-                setGameQuery({ ...gameQuery, searchText });
-              }}
-            />
-          </div>
-          <div className="py-6">
-            <GameHeader gameQuery={gameQuery} />
-          </div>
-          <PlatformSelector
-            selectedPlatform={gameQuery.platform}
-            onSelectPlatform={(platform) => {
-              setGameQuery({ ...gameQuery, platform });
-            }}
-          />
-          <div className="grid grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
-            <GameGrid gameQuery={gameQuery} />
-          </div>
-        </main>
-      </div>
+        </div>
+        <div className="py-6">
+          <GameHeader gameQuery={gameQuery} />
+        </div>
+        <PlatformSelector
+          selectedPlatform={gameQuery.platform}
+          onSelectPlatform={(platform) => {
+            setGameQuery({ ...gameQuery, platform });
+          }}
+        />
+        <div className="grid grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4">
+          <GameGrid gameQuery={gameQuery} />
+        </div>
+      </main>
     </>
   );
 };
