@@ -2,28 +2,21 @@ import React, { useState } from "react";
 import GameSideBar from "../../features/Games/GameSideBar";
 import CardWithHeader from "../elements/CardWithHeader";
 import GridList from "../elements/GridList";
+import ActionsWithSharedBorders from "./ActionsWithSharedBorders";
 
 const HomePage = () => {
 
   return (
 
     <main>
-       <div className="flex flex-auto">
-        <div className="flex-auto w-32 p-6">
-        <CardWithHeader />
-        </div>
-        <div className="flex-auto w-32 p-6">
-        <CardWithHeader />
-        </div>
-       </div>
-       <div className="flex">
-        <div className="flex-auto w-32 p-6">
-        <CardWithHeader />
-        </div>
-        <div className="flex-auto w-32 p-6">
-        <CardWithHeader />
-        </div>
-       </div>
+      <section className="px-8 py-4">
+      <h1>Welcome to the online portal!</h1>
+      <p className="pt-4 text-lg">Choose from the options below</p>
+      </section>
+
+       <section>
+        <ActionsWithSharedBorders />
+       </section>
 
        
       </main>

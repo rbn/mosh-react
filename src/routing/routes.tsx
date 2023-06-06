@@ -11,6 +11,9 @@ import EventList from "../features/Events/EventList";
 import ApplicationShell from "../ui/layouts/ApplicationShell";
 import BlankLayout from "../ui/layouts/BlankLayout";
 import HomePage from "../ui/pages/HomePage";
+import UpcomingMeetings from "../features/Events/UpcomingMeetings";
+import AnnualConference from "../features/Events/AnnualConference";
+import Login2Page from "../ui/pages/LoginAltPage";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <LoginPage />,
+      },
+      {
+        path: ":id",
+        element: <Login2Page />,
       },
     ],
   },
@@ -37,7 +44,11 @@ const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <EventTestingLinks />,
+            element: <UpcomingMeetings />,
+          },
+          {
+            path: ":id",
+            element: <AnnualConference />,
           },
           {
             path: "list",

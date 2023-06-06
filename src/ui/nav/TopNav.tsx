@@ -18,7 +18,7 @@ const navigation = [
   { name: "Events", href: "/auth/events" },
   { name: "Store", href: "/auth/store" },
   { name: "Membership", href: "/auth/membership" },
-  { name: "(Games)", href: "/auth/games" },
+  { name: "API Demo", href: "/auth/games" },
 ];
 
 const TopNav = () => {

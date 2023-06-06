@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import LoginMain from "../../features/Login/LoginMain";
+import LoginAlt from "../../features/Login/LoginAlt";
 
-const LoginPage = () => {
+const LoginAltPage = () => {
   return (
     <main>
       <div className="w-full text-center my-8"></div>
-      <LoginMain />
+      <LoginAlt />
     </main>
   );
 };
 
-export default LoginPage;
+export default LoginAltPage;

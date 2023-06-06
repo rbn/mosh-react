@@ -4,16 +4,13 @@ import EventCalendar from "../../features/Events/EventCalendar";
 import EventSideBar from "../../features/Events/EventsSideBar";
 import { Outlet, Route, Routes } from "react-router-dom";
 import EventList from "../../features/Events/EventList";
+import UpcomingMeetings from "../../features/Events/UpcomingMeetings";
 
 const EventsPage = () => {
   const [automaticTimezoneEnabled, setAutomaticTimezoneEnabled] =
     useState(true);
   return (
     <main>
-      <div>
-        <h1 className="font-bold py-6">I am the Events page</h1>
-      </div>
-
       <Outlet />
     </main>
   );

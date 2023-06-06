@@ -17,6 +17,7 @@ export default function BasicLayout() {
         <Routes>
           <Route path="" element={<SideBar />} />
           <Route path="events" element={<SideBar />} />
+          <Route path="events/:id" element={<SideBar />} />
           <Route path="store" element={<SideBar />} />
           <Route path="membership" element={<SideBar />} />
         </Routes>
