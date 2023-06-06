@@ -1,11 +1,16 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import TopNav from "../nav/TopNav";
+import EventSideBar from "../../features/Events/EventsSideBar";
+import React from "react";
 
 export default function BasicLayout() {
   return (
-    <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 flex">
+    <>
+      {/*  Top Nav */}
       <TopNav />
+
+      {/* Main  */}
       <Outlet />
-    </div>
+    </>
   );
 }

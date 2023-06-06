@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-const EventWizard1 = () => {
+const EventList = () => {
   return (
     <>
       {" "}
@@ -59,9 +59,8 @@ const EventWizard1 = () => {
           </div>
         </dl>
       </div>
-      <Outlet />
     </>
   );
 };
 
-export default EventWizard1;
+export default EventList;
