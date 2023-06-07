@@ -35,14 +35,14 @@ export default function ConferenceDetails() {
                   Lorem, ipsum dolor sit amet consectetur adipisicing
                 </p>
 
-                <p className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
+                <div className="mt-1 max-w-2xl text-sm leading-6 text-gray-500">
                   <div className="flex flex-row">
                     <FaTwitterSquare className="h-8 w-8 text-sky-500" />
                     <FaFacebookSquare className="h-8 w-8 text-blue-900" />
                     <FaLinkedin className="h-8 w-8 text-sky-800" />
                     <FaEnvelopeSquare className="h-8 w-8 text-sky-500" />
                   </div>
-                </p>
+                </div>
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function ConferenceDetails() {
               </div> */}
             </dl>
           </div>
-          <div className="flex-initial w-64 justify-center mx-3 p-6 border-l-2">
+          <div className="flex-initial w-64 justify-center ml-8 mr-5 my-6 p-6 border-l-2">
             <h3 className="py-2">Regular admission</h3>
             <div className="flex py-2">
               <p className="flex-initial">Non-member</p>
@@ -174,7 +174,7 @@ export default function ConferenceDetails() {
                 width="w-36 my-4 flex-initial"
                 onClick={(e) => {
                   e.preventDefault;
-                  navigate("/");
+                  navigate("/auth/events/register");
                 }}
               >
                 Register

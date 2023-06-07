@@ -6,15 +6,14 @@ import EventsPage from "../ui/pages/EventsPage";
 import BasicLayout from "../ui/layouts/BasicLayout";
 import StorePage from "../ui/pages/StorePage";
 import MembershipPage from "../ui/pages/MembershipPage";
-import EventTestingLinks from "../features/Events/EventTestingLinks";
 import EventList from "../features/Events/EventList";
 import ApplicationShell from "../ui/layouts/ApplicationShell";
 import BlankLayout from "../ui/layouts/BlankLayout";
 import HomePage from "../ui/pages/HomePage";
 import UpcomingMeetings from "../features/Events/UpcomingMeetings";
-import AnnualConference from "../features/Events/AnnualConference";
 import Login2Page from "../ui/pages/LoginAltPage";
 import ConferenceDetails from "../features/Events/ConferenceDetails";
+import ConferenceRegistration from "../features/Events/ConferenceRegistration";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +53,10 @@ const router = createBrowserRouter([
           {
             path: "list",
             element: <EventList />,
+          },
+          {
+            path: "register",
+            element: <ConferenceRegistration />,
           },
         ],
       },
