@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
 
     <main>
-      <section className="px-8 py-4">
+      <section>
       <h1>Welcome to the online portal!</h1>
       <p className="pt-4 text-lg">Choose from the options below</p>
       </section>

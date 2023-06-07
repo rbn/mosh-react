@@ -14,6 +14,7 @@ import HomePage from "../ui/pages/HomePage";
 import UpcomingMeetings from "../features/Events/UpcomingMeetings";
 import AnnualConference from "../features/Events/AnnualConference";
 import Login2Page from "../ui/pages/LoginAltPage";
+import ConferenceDetails from "../features/Events/ConferenceDetails";
 
 const router = createBrowserRouter([
   {
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
           },
           {
             path: ":id",
-            element: <AnnualConference />,
+            element: <ConferenceDetails />,
           },
           {
             path: "list",

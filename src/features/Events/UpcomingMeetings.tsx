@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { EllipsisHorizontalIcon } from "@heroicons/react/20/solid";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsCalendar3EventFill } from "react-icons/bs";
 
 const statuses = {
@@ -107,18 +107,18 @@ export default function UpcomingMeetings() {
                 <Menu.Items className="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
                   <Menu.Item>
                     {({ active }) => (
-                      <a
-                        href="/auth/events/1"
+                      <Link
+                        to="/auth/events/1"
                         className={classNames(
                           active ? "bg-gray-50" : "",
                           "block px-3 py-1 text-sm leading-6 text-gray-900"
                         )}
                       >
-                        View<span className="sr-only">, {client.name}</span>
-                      </a>
+                        Details<span className="sr-only">, {client.name}</span>
+                      </Link>
                     )}
                   </Menu.Item>
-                  <Menu.Item>
+                  {/* <Menu.Item>
                     {({ active }) => (
                       <a
                         href="#"
@@ -130,7 +130,7 @@ export default function UpcomingMeetings() {
                         Edit<span className="sr-only">, {client.name}</span>
                       </a>
                     )}
-                  </Menu.Item>
+                  </Menu.Item> */}
                 </Menu.Items>
               </Transition>
             </Menu>

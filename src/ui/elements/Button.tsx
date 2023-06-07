@@ -5,6 +5,7 @@ interface Props {
   onClick?: () => void;
   style?: string;
   fontWeight?: string;
+  width?: string;
 }
 
 const Button = ({
@@ -12,6 +13,7 @@ const Button = ({
   onClick,
   style = "rounded",
   fontWeight = "font-bold",
+  width = "w-auto",
 }) => {
   const styles = {
     underlined:
@@ -19,7 +21,7 @@ const Button = ({
     rounded: "bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full",
   };
 
-  const finalStyle = styles[style] + " " + fontWeight;
+  const finalStyle = styles[style] + " " + fontWeight + " " + width;
 
   return (
     <button className={finalStyle} onClick={onClick}>

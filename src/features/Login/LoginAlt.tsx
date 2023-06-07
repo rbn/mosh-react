@@ -31,8 +31,8 @@ export default function LoginAlt() {
           <div className="mx-auto w-full max-w-sm lg:w-96">
             <div>
               <img
-                className="h-10 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="mx-auto h-20 w-auto"
+                src="/img/Cobalt-Icon.jpg"
                 alt="Your Company"
               />
               <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -131,7 +131,7 @@ export default function LoginAlt() {
                 </form>
               </div>
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <div className="relative">
                   <div
                     className="absolute inset-0 flex items-center"
@@ -185,7 +185,7 @@ export default function LoginAlt() {
                     </span>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

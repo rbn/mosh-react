@@ -13,13 +13,15 @@
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
   }
-
   
   a {
     @apply font-medium text-blue-600 dark:text-blue-950 hover:underline
  }
  main {
   @apply px-4 py-16 sm:px-6 lg:flex-auto lg:px-4 lg:py-20 h-screen w-screen
+ }
+ section {
+  @apply px-8 py-4
  }
 }
 
@@ -35,10 +37,14 @@
     src: url(/fonts/proxima-nova/500-medium.woff) format("woff");
   } */
   h1 {
-    @apply text-4xl;
+    @apply text-4xl font-bold
   }
   h2 {
-    @apply text-2xl;
+    @apply text-2xl font-bold
+  }
+  
+  h3 {
+    @apply text-xl font-bold
   }
   
 }

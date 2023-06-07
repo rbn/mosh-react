@@ -1,3 +1,4 @@
 - routing is hacked - need to figure out login
 - routing - repeating "main" and "aside" too much
   - either add global styles or figure out useOutletContext
+- refresh does not appear to be working (go to API demo, click around, click refresh)

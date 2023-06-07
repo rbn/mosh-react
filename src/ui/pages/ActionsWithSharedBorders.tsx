@@ -10,6 +10,7 @@ import {
 import { BsFillFilePersonFill, BsCalendar4Event } from "react-icons/bs";
 import { MdOutlineBadge } from "react-icons/md";
 import { GrCertificate } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const actions = [
   {
@@ -91,11 +92,11 @@ export default function ActionsWithSharedBorders() {
           </div>
           <div className="mt-8">
             <h3 className="text-base font-semibold leading-6 text-gray-900">
-              <a href={action.href} className="focus:outline-none">
+              <Link to={action.href} className="focus:outline-none">
                 {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
-              </a>
+              </Link>
             </h3>
             <p className="mt-2 text-sm text-gray-500">
               Doloribus dolores nostrum quia qui natus officia quod et dolorem.
