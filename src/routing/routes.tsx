@@ -14,6 +14,7 @@ import UpcomingMeetings from "../features/Events/UpcomingMeetings";
 import Login2Page from "../ui/pages/LoginAltPage";
 import ConferenceDetails from "../features/Events/ConferenceDetails";
 import ConferenceRegistration from "../features/Events/ConferenceRegistration";
+import ProfilePage from "../ui/pages/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <HomePage />,
+      },
+      {
+        path: "profile",
+        element: <ProfilePage />,
       },
       {
         path: "events",

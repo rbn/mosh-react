@@ -2,12 +2,14 @@ import { Transition } from "@headlessui/react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "../../ui/elements/ProgressBar";
 
 export default function ConferenceRegistration() {
   const [currentProgress, setCurrentProgress] = useState<number>(1);
   const navigate = useNavigate();
 
   function onChange(i) {
+    if (currentProgress > 2) return;
     setCurrentProgress(currentProgress + i);
   }
 
@@ -15,6 +17,7 @@ export default function ConferenceRegistration() {
     <div className="space-y-6 p-6">
       {currentProgress > 0 && (
         <form
+          id="firstForm"
           onSubmit={(e) => {
             e.preventDefault();
           }}
@@ -33,6 +36,11 @@ export default function ConferenceRegistration() {
                 Annual Conference 2023 Registration
               </h2>
               <div className="flex m-auto">something else</div>
+            </div>
+            <div className="p-3 w-8/12">
+              <ProgressBar
+                styles={{ width: ((currentProgress - 1) / 2) * 100 + "%" }}
+              />
             </div>
             <fieldset className="mt-6">
               <legend className="text-sm font-semibold leading-6 text-gray-900">
@@ -120,14 +128,14 @@ export default function ConferenceRegistration() {
                 </p>
                 <div className="flex items-center gap-x-3">
                   <input
-                    id="push-everything"
-                    name="push-notifications"
+                    id="attendee-registration"
+                    name="attendee-registration"
                     type="radio"
                     className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     onClick={() => onChange(1)}
                   />
                   <label
-                    htmlFor="push-everything"
+                    htmlFor="attendee-registration"
                     className="block text-sm font-medium leading-6 text-gray-900"
                   >
                     Regular Admission - $75.00
@@ -493,10 +501,19 @@ export default function ConferenceRegistration() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="mt-6 flex items-center justify-center gap-x-6">
+            <div className="w-2/3 mt-6 flex items-center justify-center gap-x-6">
               <button
                 type="button"
                 className="text-sm font-semibold leading-6 text-gray-900"
+                onClick={() => {
+                  // setCurrentProgress(1);
+                  Array.from(document.querySelectorAll("input")).forEach(
+                    (input) => (input.value = "")
+                  );
+                  this.setState({
+                    itemvalues: [{}],
+                  });
+                }}
               >
                 Cancel
               </button>

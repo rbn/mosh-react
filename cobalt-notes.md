@@ -3,3 +3,5 @@
   - either add global styles or figure out useOutletContext
 - refresh does not appear to be working (go to API demo, click around, click refresh)
 - form labels - heading etc - custom styles (see "Registration Options")
+- responsive issue - ConferenceRegistration
+  -reset form?
