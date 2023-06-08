@@ -1,7 +1,12 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 const StorePage = () => {
-  return <main>I am the Store</main>;
+  return (
+    <main>
+      <Outlet />
+    </main>
+  );
 };
 
 export default StorePage;

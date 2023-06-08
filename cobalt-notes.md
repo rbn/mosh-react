@@ -5,3 +5,5 @@
 - form labels - heading etc - custom styles (see "Registration Options")
 - responsive issue - ConferenceRegistration
   -reset form?
+- store page - title for page - alignment - should standardize
+- fake placeholders: https://fakeimg.pl/

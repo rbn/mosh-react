@@ -3,23 +3,28 @@ import LoginPage from "../ui/pages/LoginPage";
 import React from "react";
 import GamePage from "../ui/pages/GamePage";
 import EventsPage from "../ui/pages/EventsPage";
-import BasicLayout from "../ui/layouts/BasicLayout";
+import PrimaryLayout from "../ui/layouts/PrimaryLayout";
 import StorePage from "../ui/pages/StorePage";
 import MembershipPage from "../ui/pages/MembershipPage";
 import EventList from "../features/Events/EventList";
 import ApplicationShell from "../ui/layouts/ApplicationShell";
-import BlankLayout from "../ui/layouts/BlankLayout";
+import SimpleLayout from "../ui/layouts/SimpleLayout";
 import HomePage from "../ui/pages/HomePage";
 import UpcomingMeetings from "../features/Events/UpcomingMeetings";
 import Login2Page from "../ui/pages/LoginAltPage";
 import ConferenceDetails from "../features/Events/ConferenceDetails";
 import ConferenceRegistration from "../features/Events/ConferenceRegistration";
 import ProfilePage from "../ui/pages/ProfilePage";
+import ProductList from "../features/store/ProductList";
+import ProductDetail from "../features/Store/ProductDetail";
+import Cart from "../features/Store/Cart";
+import Checkout from "../features/Store/Checkout";
+import OrderSummary from "../features/Store/OrderSummary";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <BlankLayout />,
+    element: <SimpleLayout />,
     children: [
       {
         path: "",
@@ -33,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/auth/*",
-    element: <BasicLayout />,
+    element: <PrimaryLayout />,
     children: [
       {
         path: "",
@@ -68,6 +73,28 @@ const router = createBrowserRouter([
       {
         path: "store",
         element: <StorePage />,
+        children: [
+          {
+            index: true,
+            element: <ProductList />,
+          },
+          {
+            path: ":id",
+            element: <ProductDetail />,
+          },
+          {
+            path: "cart",
+            element: <Cart />,
+          },
+          {
+            path: "checkout",
+            element: <Checkout />,
+          },
+          {
+            path: "ordersummary",
+            element: <OrderSummary />,
+          },
+        ],
       },
       {
         path: "membership",

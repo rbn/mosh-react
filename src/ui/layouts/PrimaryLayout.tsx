@@ -4,7 +4,7 @@ import EventSideBar from "../../features/Events/EventsSideBar";
 import React from "react";
 import SideBar from "../nav/SideBar";
 
-export default function BasicLayout() {
+export default function PrimaryLayout() {
   return (
     <>
       {/*  Top Nav */}
@@ -22,6 +22,9 @@ export default function BasicLayout() {
           <Route path="membership" element={<SideBar />} />
         </Routes>
         <Outlet />
+        <Routes>
+          <Route path="store" element={<SideBar />} />
+        </Routes>
       </div>
     </>
   );

@@ -3,19 +3,30 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProgressBar from "../../ui/elements/ProgressBar";
+import ProgressBarSteps, {
+  eventStep,
+} from "../../ui/elements/ProgressBarSteps";
+
+const steps = [
+  { name: "Step 1", href: "#", status: "current" },
+  { name: "Step 2", href: "#", status: "current" },
+  { name: "Step 3", href: "#", status: "current" },
+  // { name: "Step 4", href: "#", status: "upcoming" },
+  // { name: "Step 5", href: "#", status: "upcoming" },
+];
 
 export default function ConferenceRegistration() {
-  const [currentProgress, setCurrentProgress] = useState<number>(1);
+  const [currentProgress, setCurrentProgress] = useState<eventStep[]>(steps);
   const navigate = useNavigate();
 
   function onChange(i) {
-    if (currentProgress > 2) return;
-    setCurrentProgress(currentProgress + i);
+    // if (currentProgress > 2) return;
+    // setCurrentProgress(currentProgress + i);
   }
 
   return (
     <div className="space-y-6 p-6">
-      {currentProgress > 0 && (
+      {true && (
         <form
           id="firstForm"
           onSubmit={(e) => {
@@ -35,12 +46,10 @@ export default function ConferenceRegistration() {
               <h2 className="my-auto flex text-2xl font-semibold leading-7 text-gray-900">
                 Annual Conference 2023 Registration
               </h2>
-              <div className="flex m-auto">something else</div>
+              <div className="flex m-auto"> </div>
             </div>
-            <div className="p-3 w-8/12">
-              <ProgressBar
-                styles={{ width: ((currentProgress - 1) / 2) * 100 + "%" }}
-              />
+            <div className="p-6 mt-3/4 w-8/12">
+              <ProgressBarSteps steps={steps} />
             </div>
             <fieldset className="mt-6">
               <legend className="text-sm font-semibold leading-6 text-gray-900">

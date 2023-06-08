@@ -4,7 +4,7 @@ import EventSideBar from "../../features/Events/EventsSideBar";
 import React from "react";
 import SideBar from "../nav/SideBar";
 
-export default function BlankLayout() {
+export default function SimpleLayout() {
   return (
     <>
       <div className="mx-auto max-w-7xl sm:px-6 lg:px-8 flex">
