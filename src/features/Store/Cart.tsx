@@ -1,5 +1,6 @@
 import { CheckIcon, ClockIcon } from "@heroicons/react/20/solid";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 const products = [
   {
@@ -151,14 +152,14 @@ export default function Cart() {
 
             <div className="mt-6 text-center text-sm">
               <p>
-                or
-                <a
-                  href="#"
+                or{" "}
+                <Link
+                  to="/auth/store"
                   className="font-medium text-indigo-600 hover:text-indigo-500"
                 >
                   Continue Shopping
                   <span aria-hidden="true"> &rarr;</span>
-                </a>
+                </Link>
               </p>
             </div>
           </section>

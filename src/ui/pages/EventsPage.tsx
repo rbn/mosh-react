@@ -11,6 +11,7 @@ const EventsPage = () => {
     useState(true);
   return (
     <main>
+      <h2 className="my-8 ml-2">Upcoming Meetings</h2>
       <Outlet />
     </main>
   );
