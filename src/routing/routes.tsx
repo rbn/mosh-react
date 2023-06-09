@@ -20,6 +20,8 @@ import ProductDetail from "../features/Store/ProductDetail";
 import Cart from "../features/Store/Cart";
 import Checkout from "../features/Store/Checkout";
 import OrderSummary from "../features/Store/OrderSummary";
+import CertificationPage from "../ui/pages/CertificationPage";
+import HomeSplash from "../features/Home/HomeSplash";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
+        element: <HomeSplash />,
+      },
+      {
+        path: "home",
         element: <HomePage />,
       },
       {
@@ -99,6 +105,10 @@ const router = createBrowserRouter([
       {
         path: "membership",
         element: <MembershipPage />,
+      },
+      {
+        path: "certification",
+        element: <CertificationPage />,
       },
       {
         path: "games",

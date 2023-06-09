@@ -7,3 +7,7 @@
   -reset form?
 - store page - title for page - alignment - should standardize
 - fake placeholders: https://fakeimg.pl/
+- HOW TO: to set up a new page
+  - add the page in "pages" folder
+  - add page to routes
+  - configure sidebars

@@ -23,13 +23,12 @@ import { ShieldCheckIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
 const product = {
-  name: "Everyday Ruck Snack",
+  name: "Cobalt Mug",
   href: "#",
   price: "$220",
   description:
     "Don't compromise on snack-carrying capacity with this lightweight and spacious bag. The drawstring top keeps all your favorite chips, crisps, fries, biscuits, crackers, and cookies secure.",
-  imageSrc:
-    "https://tailwindui.com/img/ecommerce-images/product-page-04-featured-product-shot.jpg",
+  imageSrc: "/img/products/mug.png",
   imageAlt:
     "Model wearing light green backpack with black canvas straps and front zipper pouch.",
   breadcrumbs: [
@@ -37,8 +36,8 @@ const product = {
     { id: 2, name: "Bags", href: "#" },
   ],
   sizes: [
-    { name: "18L", description: "Perfect for a reasonable amount of snacks." },
-    { name: "20L", description: "Enough room for a serious amount of snacks." },
+    // { name: "18L", description: "Perfect for a reasonable amount of snacks." },
+    // { name: "20L", description: "Enough room for a serious amount of snacks." },
   ],
 };
 const reviews = { average: 4, totalCount: 1624 };
@@ -163,9 +162,9 @@ export default function ProductDetail() {
               <div className="sm:flex sm:justify-between">
                 {/* Size selector */}
                 <RadioGroup value={selectedSize} onChange={setSelectedSize}>
-                  <RadioGroup.Label className="block text-sm font-medium text-gray-700">
+                  {/* <RadioGroup.Label className="block text-sm font-medium text-gray-700">
                     Size
-                  </RadioGroup.Label>
+                  </RadioGroup.Label> */}
                   <div className="mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2">
                     {product.sizes.map((size) => (
                       <RadioGroup.Option
@@ -210,7 +209,7 @@ export default function ProductDetail() {
                   </div>
                 </RadioGroup>
               </div>
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <a
                   href="#"
                   className="group inline-flex text-sm text-gray-500 hover:text-gray-700"
@@ -221,7 +220,7 @@ export default function ProductDetail() {
                     aria-hidden="true"
                   />
                 </a>
-              </div>
+              </div> */}
               <div className="mt-10">
                 <button
                   type="submit"

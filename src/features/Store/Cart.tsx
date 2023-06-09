@@ -10,8 +10,7 @@ const products = [
     color: "Mint",
     size: "Medium",
     inStock: true,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/checkout-page-03-product-04.jpg",
+    imageSrc: "/img/products/mug.png",
     imageAlt: "Front side of mint cotton t-shirt with wavey lines pattern.",
   },
   {
@@ -21,10 +20,9 @@ const products = [
     price: "$32.00",
     color: "Charcoal",
     inStock: false,
-    leadTime: "7-8 years",
+    leadTime: "2-3 weeks",
     size: "Large",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-01-product-02.jpg",
+    imageSrc: "/img/products/fleece.png",
     imageAlt: "Front side of charcoal cotton t-shirt.",
   },
   // More products...

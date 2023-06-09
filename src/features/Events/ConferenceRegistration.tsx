@@ -166,13 +166,7 @@ export default function ConferenceRegistration() {
                 type="button"
                 className="text-sm font-semibold leading-6 text-gray-900"
                 onClick={() => {
-                  // setcurrentStep(1);
-                  Array.from(document.querySelectorAll("input")).forEach(
-                    (input) => (input.value = "")
-                  );
-                  this.setState({
-                    itemvalues: [{}],
-                  });
+                  setCurrentStage(0);
                 }}
               >
                 Cancel

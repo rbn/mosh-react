@@ -14,11 +14,11 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 
 const navigation = [
-  { name: "Home", href: "/auth" },
+  { name: "Home", href: "/auth/home" },
   { name: "Events", href: "/auth/events" },
   { name: "Store", href: "/auth/store" },
   { name: "Membership", href: "/auth/membership" },
-  { name: "API Demo", href: "/auth/games" },
+  // { name: "API Demo", href: "/auth/games" },
 ];
 
 const TopNav = () => {

@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 const actions = [
   {
     title: "Update your profile",
-    href: "#",
+    href: "/auth/profile",
     icon: BsFillFilePersonFill,
     iconForeground: "text-teal-700",
     iconBackground: "bg-teal-50",
@@ -36,7 +36,7 @@ const actions = [
   },
   {
     title: "Apply for new certifications",
-    href: "#",
+    href: "/auth/certification",
     icon: GrCertificate,
     iconForeground: "text-yellow-700",
     iconBackground: "bg-yellow-50",

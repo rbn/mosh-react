@@ -1,5 +1,11 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 
+// const steps = [
+//   { id: 1, href: "#", status: "complete" },
+//   { id: 2, href: "#", status: "complete" },
+//   { id: 3, href: "#", status: "current" },
+// ];
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
