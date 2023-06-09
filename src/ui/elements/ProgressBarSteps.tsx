@@ -1,20 +1,15 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
 
-export interface eventStep {
-  name: string;
-  href: string;
-  status: string; // status: current, complete
-}
-
-interface Props {
-  steps: eventStep[];
-}
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function ProgressBarSteps({ steps }: Props) {
+interface Props {
+  steps: [];
+  stage: number;
+}
+
+export default function ProgressBarSteps({ steps, stage }: Props) {
   return (
     <nav aria-label="Progress">
       <ol role="list" className="flex items-center">
@@ -26,7 +21,7 @@ export default function ProgressBarSteps({ steps }: Props) {
               "relative"
             )}
           >
-            {step.status === "complete" ? (
+            {step.id === stage || step.id < stage ? (
               <>
                 <div
                   className="absolute inset-0 flex items-center"
@@ -42,10 +37,10 @@ export default function ProgressBarSteps({ steps }: Props) {
                     className="h-5 w-5 text-white"
                     aria-hidden="true"
                   />
-                  <span className="sr-only">{step.name}</span>
+                  <span className="sr-only">{step.id}</span>
                 </a>
               </>
-            ) : step.status === "current" ? (
+            ) : step.id > stage ? (
               <>
                 <div
                   className="absolute inset-0 flex items-center"
@@ -62,7 +57,7 @@ export default function ProgressBarSteps({ steps }: Props) {
                     className="h-2.5 w-2.5 rounded-full bg-indigo-600"
                     aria-hidden="true"
                   />
-                  <span className="sr-only">{step.name}</span>
+                  <span className="sr-only">{step.id}</span>
                 </a>
               </>
             ) : (
@@ -81,7 +76,7 @@ export default function ProgressBarSteps({ steps }: Props) {
                     className="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300"
                     aria-hidden="true"
                   />
-                  <span className="sr-only">{step.name}</span>
+                  <span className="sr-only">{step.id}</span>
                 </a>
               </>
             )}
