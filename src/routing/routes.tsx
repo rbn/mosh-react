@@ -15,7 +15,7 @@ import Login2Page from "../ui/pages/LoginAltPage";
 import ConferenceDetails from "../features/Events/ConferenceDetails";
 import ConferenceRegistration from "../features/Events/ConferenceRegistration";
 import ProfilePage from "../ui/pages/ProfilePage";
-import ProductList from "../features/store/ProductList";
+import ProductList from "../features/Store/ProductList";
 import ProductDetail from "../features/Store/ProductDetail";
 import Cart from "../features/Store/Cart";
 import Checkout from "../features/Store/Checkout";

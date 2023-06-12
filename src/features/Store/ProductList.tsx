@@ -20,7 +20,7 @@ export default function ProductList() {
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8">
-        <h2 className="sr-only">Products</h2>
+        <h2 className="my-4">Store</h2>
 
         <div className="-mx-px grid grid-cols-2 border-2 rounded-2xl border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
           {products.map((product) => (
