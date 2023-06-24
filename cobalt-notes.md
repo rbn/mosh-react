@@ -11,3 +11,4 @@
   - add the page in "pages" folder
   - add page to routes
   - configure sidebars
+- gitignore - VSCodeCheatSheet
